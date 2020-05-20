@@ -1,449 +1,360 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charSet="utf-8" class="next-head" />
-		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" class="next-head" />
-		<link rel="preload" href="https://res.qixin18.com/node-qixin-cps-v3/_next/static/node-qixin-cps-v3-v0.2.8-1589333412985/pages/activity/reservation.js"
-		 as="script" />
-		<link rel="preload" href="https://res.qixin18.com/node-qixin-cps-v3/_next/static/node-qixin-cps-v3-v0.2.8-1589333412985/pages/_app.js"
-		 as="script" />
-		<link rel="preload" href="https://res.qixin18.com/node-qixin-cps-v3/_next/static/runtime/webpack-8ed9452df514b4d17d80.js"
-		 as="script" />
-		<link rel="preload" href="https://res.qixin18.com/node-qixin-cps-v3/_next/static/chunks/main.4ca73b2612255272d2da.js"
-		 as="script" />
-		<link rel="preload" href="https://res.qixin18.com/node-qixin-cps-v3/_next/static/chunks/vendors.31d02310eb6654b3d422.js"
-		 as="script" />
-		<link rel="preload" href="https://res.qixin18.com/node-qixin-cps-v3/_next/static/runtime/main-1d4a8093ddeb2092eeb5.js"
-		 as="script" />
-		<link rel="stylesheet" href="https://res.qixin18.com/node-qixin-cps-v3/_next/static/css/static/node-qixin-cps-v3-v0.2.8-1589333412985/pages/activity/reservation.js.71d208a5.chunk.css" />
-		<link rel="stylesheet" href="https://res.qixin18.com/node-qixin-cps-v3/_next/static/css/static/node-qixin-cps-v3-v0.2.8-1589333412985/pages/_app.js.177c256a.chunk.css" />
-	</head>
-	<meta charSet="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-	<meta http-equiv="Pragma" content="no-cache" />
-	<meta http-equiv="Expires" content="0" />
-	<meta http-equiv="Description" content="家庭保险账户" />
-	<link rel="icon" href="https://res.qixin18.com/node-qixin-cps-v3/static/favicon.ico" />
-	<script src="https://res.qixin18.com/node-qixin-cps-v3/static/js/flexible/flexible.js"></script>
-	<script src="https://res.qixin18.com/node-qixin-cps-v3/static/js/jweixin-1.4.0.js"></script>
-	<style>
-		.diy_color,
-                        .diy_color_after::after,
-                        .success_color,
-                        .gift_insurance_color，
-                        .am-button,
-                        .am-modal .am-modal-button-group-h .am-modal-button:last-child,
-                        .am-modal .am-modal-button-group-v .am-modal-button,
-                        .am-picker-popup-header-left, .am-picker-popup-header-right,
-                        .policy-list .policy-files .am-image-picker .am-image-picker-list .am-image-picker-upload-btn::before, .policy-list .policy-files .am-image-picker .am-image-picker-list .am-image-picker-upload-btn::after,
-                        .phone-code-list .am-list-item .am-list-line .am-input-extra,
-                        .am-search-cancel,
-                        .job-accordion-2 .am-accordion-item .am-accordion-content-box .am-list .am-list-extra,
-                        .health-detail-cont .messge-list li.actice,
-                        .underwrite-success .icon-icon8,
-                        .multiple-picker .option-item.active,
-                        .insure-form .add-beneficiary,
-                        .insure-form .add-insured,
-                        .instructions .am-card-footer a,
-                        .service-modal .am-modal-content .am-modal-body .service-steps .am-steps-item-icon .am-steps-icon,
-                        .scroll-tab .nav .am-flexbox-item.active,
-                        .insure-footer .update-trial .iconfont,
-                        .menu-modal .am-menu-select-container .am-flexbox-item:last-child .am-list .am-list-item.am-sub-menu-item-disabled .am-list-content,
-                        .declare-modal .pannel-content-box a,
-                        .am-tabs-default-bar-tab-active,
-                        .stepper-flex .decrease::after, .stepper-flex .increase::after,.choose-container .age-text span,
-                        .under-write-step #under-write-step-midle .top-content .color-title,
-                        .under-write-step #under-write-step-result .top-content .color-title,
-                        .insure-form .am-list .mobile-field .am-list-line .am-input-extra,
-                        .instructions-modal .tip .content a {color: #00a8f7 !important;}
+<head>
+    <meta charSet="utf-8" class="next-head"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" class="next-head"/>
 
-                        .diy_background,
-                        .diy_background_after::after,
-                        .policy-footer li.active .iconfont::after,
-                        .policy-list .am-list-header::before,
-                        .am-list-header::before,
-                        .am-accordion-header::before,
-                        .am-button-primary,
-                        .am-button-primary.am-button-active,
-                        .menu-modal .am-menu-select-container .am-flexbox-item:first-child .am-list-item.am-menu-selected::before,
-                        .policy-guide .guide-content .circle.sm::before, .policy-guide .guide-content .circle.sm::after,
-                        .policy-guide .guide-content .circle.xs::before, .policy-guide .guide-content .circle.xs::after,
-                        .am-switch input[type=checkbox]:checked+.checkbox,
-                        .renewal-set .am-list .am-list-header::before,
-                        .underwrite-form .footer .submit-btn,
-                        .insure-form .footer .submit-btn,
-                        .am-navbar-dark,
-                        .am-radio.am-radio-checked,
-                        .health-confirm .am-checkbox-checked .am-checkbox-inner,
-                        .health-detail-cont .tabs-list li.on,
-                        .health-detail-cont .messge-list li.actice::before,
-                        .multiple-picker .option-item.active .opacity-bg,
-                        .insure-form .agree .am-checkbox.am-checkbox-checked .am-checkbox-inner,
-                        .trial-pannel .am-list-item.stepper .am-stepper .am-stepper-handler,
-                        .claim-process .am-card-body .cliaim .index-flex .index,
-                        .claim-process .am-card-body .cliaim::before,
-                        .scroll-tab .nav .am-flexbox-item.active::after,
-                        .service-modal .am-modal-content .am-modal-body .service-item .icon-flex::after,
-                        .guarantee-plan .condition-slide li.active,
-                        .insure-form .agree-flex .am-checkbox.am-checkbox-checked .am-checkbox-inner,
-                        .am-list-item .am-input-clear-active,
-                        .am-number-keyboard-wrapper table tr .am-number-keyboard-item.keyboard-confirm,
-                        .product-detail .trial-btn,
-                        .am-number-keyboard-wrapper table tr .am-number-keyboard-item.keyboard-confirm,
-                        .am-number-keyboard-wrapper table tr .am-number-keyboard-item.keyboard-confirm.am-number-keyboard-item-disabled,
-                        .slide-ruler .mark,
-                        .under-write-step #under-write-step-top .top-circle,
-                        .under-write-step #under-write-step-midle .top-circle,
-                        .get-gift-insurance-success .success-btn,
-                        .renewal-set .am-list.phone-code-list .am-list-line .am-input-extra{background-color: #00a8f7 !important;}
+    <link rel="stylesheet"
+          href="https://res.qixin18.com/node-qixin-cps-v3/_next/static/css/static/node-qixin-cps-v3-v0.2.8-1589333412985/pages/activity/reservation.js.71d208a5.chunk.css"/>
+    <link rel="stylesheet"
+          href="https://res.qixin18.com/node-qixin-cps-v3/_next/static/css/static/node-qixin-cps-v3-v0.2.8-1589333412985/pages/_app.js.177c256a.chunk.css"/>
+</head>
+<meta charSet="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<meta http-equiv="Description" content="家庭保险账户"/>
+<script src="https://res.qixin18.com/node-qixin-cps-v3/static/js/flexible/flexible.js"></script>
+<script src="https://res.qixin18.com/node-qixin-cps-v3/static/js/jweixin-1.4.0.js"></script>
+<style>
+    .diy_color,
+    .diy_color_after::after,
+    .success_color,
+    .gift_insurance_color，
+    .am-button,
+    .am-modal .am-modal-button-group-h .am-modal-button:last-child,
+    .am-modal .am-modal-button-group-v .am-modal-button,
+    .am-picker-popup-header-left, .am-picker-popup-header-right,
+    .policy-list .policy-files .am-image-picker .am-image-picker-list .am-image-picker-upload-btn::before, .policy-list .policy-files .am-image-picker .am-image-picker-list .am-image-picker-upload-btn::after,
+    .phone-code-list .am-list-item .am-list-line .am-input-extra,
+    .am-search-cancel,
+    .job-accordion-2 .am-accordion-item .am-accordion-content-box .am-list .am-list-extra,
+    .health-detail-cont .messge-list li.actice,
+    .underwrite-success .icon-icon8,
+    .multiple-picker .option-item.active,
+    .insure-form .add-beneficiary,
+    .insure-form .add-insured,
+    .instructions .am-card-footer a,
+    .service-modal .am-modal-content .am-modal-body .service-steps .am-steps-item-icon .am-steps-icon,
+    .scroll-tab .nav .am-flexbox-item.active,
+    .insure-footer .update-trial .iconfont,
+    .menu-modal .am-menu-select-container .am-flexbox-item:last-child .am-list .am-list-item.am-sub-menu-item-disabled .am-list-content,
+    .declare-modal .pannel-content-box a,
+    .am-tabs-default-bar-tab-active,
+    .stepper-flex .decrease::after, .stepper-flex .increase::after, .choose-container .age-text span,
+    .under-write-step #under-write-step-midle .top-content .color-title,
+    .under-write-step #under-write-step-result .top-content .color-title,
+    .insure-form .am-list .mobile-field .am-list-line .am-input-extra,
+    .instructions-modal .tip .content a {
+        color: #00a8f7 !important;
+    }
 
-                        .am-radio.am-radio-checked,
-                        .insure-form .agree .am-checkbox.am-checkbox-checked .am-checkbox-inner,
-                        .service-modal .am-modal-content .am-modal-body .service-steps .am-steps-item-icon,
-                        .am-tabs-default-bar-underline,
-                        .am-list-item .am-input-control .fake-input-container .fake-input.focus:after,
-                        .under-write-step #under-write-step-top .top-line,
-                        .under-write-step #under-write-step-midle .success-line,
-                        .am-checkbox.am-checkbox-checked .am-checkbox-inner {border-color: #00a8f7 !important;}
-                        
-                        .diy_border,
-                        .am-button-primary,
-                        .am-button-primary::before,
-                        .policy-list .policy-files .am-image-picker .am-image-picker-list .am-image-picker-upload-btn,
+    .diy_background,
+    .diy_background_after::after,
+    .policy-footer li.active .iconfont::after,
+    .policy-list .am-list-header::before,
+    .am-list-header::before,
+    .am-accordion-header::before,
+    .am-button-primary,
+    .am-button-primary.am-button-active,
+    .menu-modal .am-menu-select-container .am-flexbox-item:first-child .am-list-item.am-menu-selected::before,
+    .policy-guide .guide-content .circle.sm::before, .policy-guide .guide-content .circle.sm::after,
+    .policy-guide .guide-content .circle.xs::before, .policy-guide .guide-content .circle.xs::after,
+    .am-switch input[type=checkbox]:checked + .checkbox,
+    .renewal-set .am-list .am-list-header::before,
+    .underwrite-form .footer .submit-btn,
+    .insure-form .footer .submit-btn,
+    .am-navbar-dark,
+    .am-radio.am-radio-checked,
+    .health-confirm .am-checkbox-checked .am-checkbox-inner,
+    .health-detail-cont .tabs-list li.on,
+    .health-detail-cont .messge-list li.actice::before,
+    .multiple-picker .option-item.active .opacity-bg,
+    .insure-form .agree .am-checkbox.am-checkbox-checked .am-checkbox-inner,
+    .trial-pannel .am-list-item.stepper .am-stepper .am-stepper-handler,
+    .claim-process .am-card-body .cliaim .index-flex .index,
+    .claim-process .am-card-body .cliaim::before,
+    .scroll-tab .nav .am-flexbox-item.active::after,
+    .service-modal .am-modal-content .am-modal-body .service-item .icon-flex::after,
+    .guarantee-plan .condition-slide li.active,
+    .insure-form .agree-flex .am-checkbox.am-checkbox-checked .am-checkbox-inner,
+    .am-list-item .am-input-clear-active,
+    .am-number-keyboard-wrapper table tr .am-number-keyboard-item.keyboard-confirm,
+    .product-detail .trial-btn,
+    .am-number-keyboard-wrapper table tr .am-number-keyboard-item.keyboard-confirm,
+    .am-number-keyboard-wrapper table tr .am-number-keyboard-item.keyboard-confirm.am-number-keyboard-item-disabled,
+    .slide-ruler .mark,
+    .under-write-step #under-write-step-top .top-circle,
+    .under-write-step #under-write-step-midle .top-circle,
+    .get-gift-insurance-success .success-btn,
+    .renewal-set .am-list.phone-code-list .am-list-line .am-input-extra {
+        background-color: #00a8f7 !important;
+    }
 
-                        .menu-modal .am-menu-select-container .am-flexbox-item:last-child .am-list .am-list-item.am-sub-menu-item-selected .am-radio.am-radio-checked .am-radio-inner:after {border-color: #00a8f7 !important;color: #ffffff !important;}
-                        
-                        .loadmore-footer .am-activity-indicator-spinner{background-image: url(&#x27;data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;-2.125 -1.875 64 64&quot;&gt;&lt;path fill=&quot;#CCC&quot; d=&quot;M29.875-1.875c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm0 60.7c-15.85 0-28.7-12.85-28.7-28.7s12.85-28.7 28.7-28.7 28.7 12.85 28.7 28.7-12.85 28.7-28.7 28.7z&quot;/&gt;&lt;path fill=&quot;#00a8f7&quot; d=&quot;M61.858 30.34c.003-.102.008-.203.008-.305 0-11.43-5.996-21.452-15.01-27.113l-.013.026c-.24-.137-.515-.22-.81-.22-.912 0-1.65.738-1.65 1.65 0 .654.384 1.215.937 1.482 7.963 5.1 13.247 14.017 13.247 24.176 0 .147-.01.293-.01.44h.022c0 .01-.004.02-.004.03 0 .91.74 1.65 1.65 1.65s1.65-.74 1.65-1.65c0-.06-.012-.112-.018-.167z&quot;/&gt;&lt;/svg&gt;&#x27;);}
-                     </style>
-	<body>
-		<div id="__next">
-			<div class="loading-container">
-				<div class="loading"><span class="loading__spinner"><svg viewBox="25 25 50 50" class="loading__circular">
+    .am-radio.am-radio-checked,
+    .insure-form .agree .am-checkbox.am-checkbox-checked .am-checkbox-inner,
+    .service-modal .am-modal-content .am-modal-body .service-steps .am-steps-item-icon,
+    .am-tabs-default-bar-underline,
+    .am-list-item .am-input-control .fake-input-container .fake-input.focus:after,
+    .under-write-step #under-write-step-top .top-line,
+    .under-write-step #under-write-step-midle .success-line,
+    .am-checkbox.am-checkbox-checked .am-checkbox-inner {
+        border-color: #00a8f7 !important;
+    }
+
+    .diy_border,
+    .am-button-primary,
+    .am-button-primary::before,
+    .policy-list .policy-files .am-image-picker .am-image-picker-list .am-image-picker-upload-btn,
+    .menu-modal .am-menu-select-container .am-flexbox-item:last-child .am-list .am-list-item.am-sub-menu-item-selected .am-radio.am-radio-checked .am-radio-inner:after {
+        border-color: #00a8f7 !important;
+        color: #ffffff !important;
+    }
+
+    .loadmore-footer .am-activity-indicator-spinner {
+        background-image: url(&#x27;data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;-2.125 -1.875 64 64&quot;&gt;&lt;path fill=&quot;#CCC&quot; d=&quot;M29.875-1.875c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm0 60.7c-15.85 0-28.7-12.85-28.7-28.7s12.85-28.7 28.7-28.7 28.7 12.85 28.7 28.7-12.85 28.7-28.7 28.7z&quot;/&gt;&lt;path fill=&quot;#00a8f7&quot; d=&quot;M61.858 30.34c.003-.102.008-.203.008-.305 0-11.43-5.996-21.452-15.01-27.113l-.013.026c-.24-.137-.515-.22-.81-.22-.912 0-1.65.738-1.65 1.65 0 .654.384 1.215.937 1.482 7.963 5.1 13.247 14.017 13.247 24.176 0 .147-.01.293-.01.44h.022c0 .01-.004.02-.004.03 0 .91.74 1.65 1.65 1.65s1.65-.74 1.65-1.65c0-.06-.012-.112-.018-.167z&quot;/&gt;&lt;/svg&gt;&#x27;);
+    }
+</style>
+<style>
+    .myui-tips {
+        position: fixed;
+        z-index: $ z-index-toast;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .myui-tips > span {
+        background-color: rgba(0, 0, 0, .7);
+        border-radius: 4px;
+        display: inline-block;
+        line-height: 24px;
+        font-size: 15px;
+        padding: 8px 20px;
+        color: #fff;
+    }
+</style>
+<body>
+<div id="__next">
+    <div class="loading-container" id="loading" style="display: none;">
+        <div class="loading"><span class="loading__spinner"><svg viewBox="25 25 50 50" class="loading__circular">
 							<circle cx="50" cy="50" r="20" fill="none"></circle>
 						</svg></span></div>
-			</div>
-			<div class="reservation-info">
-				<div class="bespeak-banner p-relative"><img src="https://res.qixin18.com/node-qixin-cps-v3/_next/static/images/reservation-c348a94b38b83356400aece6ccec8b7b.png"
-					 alt="预约顾问" /></div>
-				<div class="edit-reservation-info">
-					<form class="common-form reservation-form ">
-						<div class="am-list my-list list-style-2">
-							<div class="am-list-body">
-								<div class="must-write">
-									<div class="am-list-item am-input-item am-list-item-middle radius-top">
-										<div class="am-list-line">
-											<div class="am-input-label am-input-label-5"><span class="c-red">*</span>姓名</div>
-											<div class="am-input-control"><input type="text" value="" placeholder="您的信息将被严格保密" /></div>
-										</div>
-									</div>
-									<div class="am-list-item am-list-item-middle">
-										<div class="am-list-line">
-											<div class="am-list-content"><span class="c-red">*</span>称呼</div>
-											<div class="am-list-extra">
-												<div class="change-sex"><span class="btn active diy_background" data-value="1">先生</span><span class="btn "
-													 data-value="0">女士</span></div>
-											</div>
-										</div>
-										<div style="display:none" class="am-list-ripple"></div>
-									</div>
-									<div class="am-list-item am-input-item am-list-item-middle">
-										<div class="am-list-line">
-											<div class="am-input-label am-input-label-5"><span class="c-red">*</span>联系电话</div>
-											<div class="am-input-control"><input type="text" value="" placeholder="用于提供保险服务" /></div>
-										</div>
-									</div>
-									<div class="list-code">
-										<div class="am-list-item am-input-item am-list-item-middle">
-											<div class="am-list-line">
-												<div class="am-input-label am-input-label-5"><span class="c-red">*</span>验证码</div>
-												<div class="am-input-control"><input type="text" value="" placeholder="请输入短信验证码" /></div>
-											</div>
-										</div><span class="btn diy_background  button am-input-extra">获取验证码</span>
-									</div>
-									<div id="captcha"></div>
-									<div class="am-list-item am-input-item am-list-item-middle not-bor radius-bottom">
-										<div class="am-list-line">
-											<div class="am-input-label am-input-label-5">微信</div>
-											<div class="am-input-control"><input type="text" value="" placeholder="选填" /></div>
-										</div>
-									</div>
-								</div>
-								<div class="selective-write">
-									<p class="list-hd">以下信息选填</p>
-									<div class="am-list-item am-list-item-middle">
-										<div class="am-list-line am-list-line-multiple am-list-line-wrap">
-											<div class="am-list-content">保障需求 <div class="am-list-brief">可多选</div>
-											</div>
-											<div class="am-list-extra">
-												<div class="tags"><span class="btn " data-value="1">意外</span><span class="btn " data-value="2">疾病</span><span
-													 class="btn " data-value="3">养老</span><span class="btn " data-value="4">教育</span></div>
-											</div>
-										</div>
-										<div style="display:none" class="am-list-ripple"></div>
-									</div>
-									<div class="am-list-item am-list-item-middle">
-										<div class="am-list-line am-list-line-multiple">
-											<div class="am-list-content">为谁投保 <div class="am-list-brief">可多选</div>
-											</div>
-											<div class="am-list-extra">
-												<div class="tags"><span class="btn " data-value="1">本人</span><span class="btn " data-value="2">父母</span><span
-													 class="btn " data-value="3">配偶</span><span class="btn " data-value="4">子女</span></div>
-											</div>
-										</div>
-										<div style="display:none" class="am-list-ripple"></div>
-									</div>
-									<div class="remark-textarea am-list-item am-textarea-item">
-										<div class="am-textarea-control"><textarea placeholder="其它需求：如产品疑问，联系时间等（选填）" rows="2"></textarea></div>
-									</div>
-									<div class="remark-div">
-										<div class="remark-len">0
-											<!-- -->/100</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="footer-brand-info" id="footerBrandInfo">
-							<div class="margin">本页面保险产品销售、理赔等服务均由慧择保险经纪提供</div>
-						</div>
-						<div class="fixed-btn">
-							<div class="diy_background submit-btn">预约保险顾问</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<script id="__NEXT_DATA__" type="application/json">
-			{
-				"dataManager": "[]",
-				"props": {
-					"pageProps": {
-						"product": {},
-						"referer": "",
-						"domain": "dwn1059282",
-						"query": {},
-						"partnerInfo": {
-							"cooperativeTypeV2": 1,
-							"partnerId": 1059282,
-							"cooperativeTypeV2Config": {
-								"brandType": 0,
-								"brandBigLogo": "https://res.qixin18.com/cpspc/img/logo-nav.png",
-								"bottomTxt": "本页面保险产品销售、理赔等服务均由慧择保险经纪提供",
-								"productAreaDisplay": false,
-								"insureMessageShow": false,
-								"brandSmallLogo": "https://res.qixin18.com/cpspc/img/favicon.ico",
-								"brandName": "齐欣云服",
-								"productPageTitleType": 1,
-								"bottomDisplay": true,
-								"coBrandingDisplay": false
-							},
-							"domain": "dwn1059282",
-							"authState": 2,
-							"pcLogoUrl": "https://res.qixin18.com/cpspc/img/logo-nav.png",
-							"siteTitle": "",
-							"servicePhoneType": 1,
-							"servicePhone": "400-678-8169",
-							"specialProcessesType": 0
-						},
-						"serverRuntimeConfig": {
-							"apiBaseUrl": "https://cps.qixin18.com/v3/m/api",
-							"remoteServerUrl": "https://ptapi.qixin18.com/cps",
-							"staticUrl": "https://res.qixin18.com/node-qixin-cps-v3",
-							"siteUrl": "https://cps.qixin18.com/v3/m"
-						},
-						"genericUrl": ""
-					},
-					"partnerId": 1059282,
-					"initialReduxState": {
-						"app": {
-							"partnerInfo": {
-								"cooperativeTypeV2": 1,
-								"partnerId": 1059282,
-								"cooperativeTypeV2Config": {
-									"brandType": 0,
-									"brandBigLogo": "https://res.qixin18.com/cpspc/img/logo-nav.png",
-									"bottomTxt": "本页面保险产品销售、理赔等服务均由慧择保险经纪提供",
-									"productAreaDisplay": false,
-									"insureMessageShow": false,
-									"brandSmallLogo": "https://res.qixin18.com/cpspc/img/favicon.ico",
-									"brandName": "齐欣云服",
-									"productPageTitleType": 1,
-									"bottomDisplay": true,
-									"coBrandingDisplay": false
-								},
-								"domain": "dwn1059282",
-								"authState": 2,
-								"pcLogoUrl": "https://res.qixin18.com/cpspc/img/logo-nav.png",
-								"siteTitle": "",
-								"servicePhoneType": 1,
-								"servicePhone": "400-678-8169",
-								"specialProcessesType": 0
-							},
-							"isInitWXJsSdk": false,
-							"wxShareInfo": {}
-						},
-						"underwrite": {
-							"all": {
-								"insureModule": {},
-								"underWriteInfoByTrial": {},
-								"data": {},
-								"insureAttr": {},
-								"materials": [],
-								"toWhoData": [],
-								"healthDetail": {},
-								"product": {},
-								"support": {},
-								"underWriteInfo": {},
-								"insurantType": 0,
-								"insureSort": [],
-								"template": {},
-								"healthAnswer": {},
-								"activeKeys": [],
-								"isToMySelf": true
-							},
-							"errorTips": {
-								"value": "",
-								"visible": false
-							}
-						},
-						"reservation": {
-							"tempEntrance": {},
-							"formData": {
-								"questions": [],
-								"remark": "",
-								"sex": 1
-							},
-							"reservationText": ""
-						},
-						"menuPopup": {
-							"visible": false
-						},
-						"activities": {
-							"wish": {
-								"wishData": {}
-							},
-							"recruit": {
-								"userInfo": {},
-								"redioChecked": false,
-								"newregistergiftData": {},
-								"receivecount": 0,
-								"servicePlan": {},
-								"prodInfo": {},
-								"ncovData": {}
-							},
-							"common": {
-								"partnerInfo": {}
-							},
-							"share": {
-								"tempData": {},
-								"modalState": false,
-								"shareObj": {}
-							}
-						},
-						"product": {
-							"detail": {
-								"trialBtnDisable": false,
-								"instructions": [],
-								"planList": [],
-								"displayText": {},
-								"basicProductInfo": {},
-								"provision": {},
-								"giftInsuranceInfo": {},
-								"productInfo": {},
-								"pageInit": false
-							},
-							"insure": {
-								"product": {},
-								"insureModule": {},
-								"data": {},
-								"underwriting": {},
-								"manualTemplate": {},
-								"submitDisable": false,
-								"renewalPolicyNum": "",
-								"InsurantBeneficiaryActiveKey": []
-							},
-							"addressPicker": {
-								"data": []
-							},
-							"areaPicker": {
-								"data": []
-							},
-							"bankBranchesPicker": {
-								"data": []
-							},
-							"common": {
-								"cuidParam": {},
-								"trialData": {},
-								"equityEducation": {},
-								"annuityData": {},
-								"provisionDetail": {},
-								"apiInfo": {},
-								"partnerConfig": {},
-								"equityData": [],
-								"planData": {},
-								"partnerInfo": {},
-								"partnerIndexpage": {}
-							}
-						},
-						"policy": {
-							"pageIndex": 0,
-							"domain": "",
-							"total": 0,
-							"data": {
-								"insureGuarantees": [{
-									"guaranteeType": "",
-									"insuredAmount": ""
-								}]
-							},
-							"renewalTotal": 0,
-							"self": {},
-							"policyList": [],
-							"pageSize": 10,
-							"memberType": 0,
-							"memberTypeCounts": [],
-							"customerId": "",
-							"renewalConfig": {},
-							"companyList": null,
-							"isScrollTop": false,
-							"familyMember": []
-						},
-						"phoneCode": {
-							"phone": "",
-							"code": "",
-							"token": "",
-							"extra": "获取验证码",
-							"countdown": 60,
-							"timeOut": 60,
-							"timer": -1
-						},
-						"loading": {
-							"show": true
-						}
-					}
-				},
-				"page": "/activity/reservation",
-				"query": {},
-				"buildId": "node-qixin-cps-v3-v0.2.8-1589333412985",
-				"dynamicBuildId": false,
-				"assetPrefix": "https://res.qixin18.com/node-qixin-cps-v3",
-				"runtimeConfig": {
-					"apiBaseUrl": "https://cps.qixin18.com/v3/m/api",
-					"remoteServerUrl": "https://ptapi.qixin18.com/cps",
-					"staticUrl": "https://res.qixin18.com/node-qixin-cps-v3",
-					"siteUrl": "https://cps.qixin18.com/v3/m",
-					"nodeEnv": "production",
-					"appName": "node-qixin-cps-v3",
-					"appVersion": "0.2.8",
-					"beidouAppId": "d925c200395047edb11fabbba6c5e92b",
-					"isSupportApiToV4": true
-				}
-			}
-		</script>
-		<script async="" id="__NEXT_PAGE__/activity/reservation" src="https://res.qixin18.com/node-qixin-cps-v3/_next/static/node-qixin-cps-v3-v0.2.8-1589333412985/pages/activity/reservation.js"></script>
-		<script async="" id="__NEXT_PAGE__/_app" src="https://res.qixin18.com/node-qixin-cps-v3/_next/static/node-qixin-cps-v3-v0.2.8-1589333412985/pages/_app.js"></script>
-		<script src="https://res.qixin18.com/node-qixin-cps-v3/_next/static/runtime/webpack-8ed9452df514b4d17d80.js" async=""></script>
-		<script src="https://res.qixin18.com/node-qixin-cps-v3/_next/static/chunks/main.4ca73b2612255272d2da.js" async=""></script>
-		<script src="https://res.qixin18.com/node-qixin-cps-v3/_next/static/chunks/vendors.31d02310eb6654b3d422.js" async=""></script>
-		<script src="https://res.qixin18.com/node-qixin-cps-v3/_next/static/runtime/main-1d4a8093ddeb2092eeb5.js" async=""></script>
-	</body>
+    </div>
+    <div class="reservation-info">
+        <div class="bespeak-banner p-relative"><img
+                src="https://res.qixin18.com/node-qixin-cps-v3/_next/static/images/reservation-c348a94b38b83356400aece6ccec8b7b.png"
+                alt="预约顾问"/></div>
+        <div class="edit-reservation-info">
+            <form class="common-form reservation-form ">
+                <div class="am-list my-list list-style-2">
+                    <div class="am-list-body">
+                        <div class="must-write">
+                            <div class="am-list-item am-input-item am-list-item-middle radius-top">
+                                <div class="am-list-line">
+                                    <div class="am-input-label am-input-label-5"><span class="c-red">*</span>姓名</div>
+                                    <div class="am-input-control"><input type="text" value="" placeholder="您的信息将被严格保密"
+                                                                         id="name"/></div>
+                                </div>
+                            </div>
+                            <div class="am-list-item am-list-item-middle">
+                                <div class="am-list-line">
+                                    <div class="am-list-content"><span class="c-red">*</span>称呼</div>
+                                    <div class="am-list-extra">
+                                        <div class="change-sex">
+                                            <span class="sex-gender active btn diy_background" data-value="1">先生</span>
+                                            <span class="sex-gender btn" data-value="0">女士</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display:none" class="am-list-ripple"></div>
+                            </div>
+                            <div class="am-list-item am-input-item am-list-item-middle">
+                                <div class="am-list-line">
+                                    <div class="am-input-label am-input-label-5"><span class="c-red">*</span>联系电话</div>
+                                    <div class="am-input-control"><input type="text" value="" placeholder="用于提供保险服务"
+                                                                         id="phone" maxlength="11"/></div>
+                                </div>
+                            </div>
+                            <div class="list-code">
+                                <div class="am-list-item am-input-item am-list-item-middle">
+                                    <div class="am-list-line">
+                                        <div class="am-input-label am-input-label-5"><span class="c-red">*</span>验证码
+                                        </div>
+                                        <div class="am-input-control"><input type="text" value="" placeholder="请输入短信验证码"
+                                                                             id="code" maxlength="6"/></div>
+                                    </div>
+                                </div>
+                                <span class="btn diy_background  button am-input-extra" id="msgCode">获取验证码</span>
+                            </div>
+                            <div id="captcha"></div>
+                            <div class="am-list-item am-input-item am-list-item-middle not-bor radius-bottom">
+                                <div class="am-list-line">
+                                    <div class="am-input-label am-input-label-5">微信</div>
+                                    <div class="am-input-control"><input type="text" value="" placeholder="选填" id="wx"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selective-write">
+                            <p class="list-hd">以下信息选填</p>
+                            <div class="am-list-item am-list-item-middle">
+                                <div class="am-list-line am-list-line-multiple am-list-line-wrap">
+                                    <div class="am-list-content">保障需求
+                                        <div class="am-list-brief">可多选</div>
+                                    </div>
+                                    <div class="am-list-extra">
+                                        <div class="tags">
+                                            <span class="insure-btn btn" data-value="1">意外</span><span
+                                                class="btn insure-btn" data-value="2">
+													疾病</span><span class="insure-btn btn" data-value="3">
+													养老</span><span class="insure-btn btn" data-value="4">
+													教育</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display:none" class="am-list-ripple"></div>
+                            </div>
+                            <div class="am-list-item am-list-item-middle">
+                                <div class="am-list-line am-list-line-multiple">
+                                    <div class="am-list-content">为谁投保
+                                        <div class="am-list-brief">可多选</div>
+                                    </div>
+                                    <div class="am-list-extra">
+                                        <div class="tags"><span class="btn for-btn" data-value="1">本人</span><span
+                                                class="btn for-btn" data-value="2">父母</span><span
+                                                class="btn for-btn" data-value="3">配偶</span><span class="btn for-btn"
+                                                                                                  data-value="4">子女</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display:none" class="am-list-ripple"></div>
+                            </div>
+                            <div class="remark-textarea am-list-item am-textarea-item">
+                                <div class="am-textarea-control"><textarea placeholder="其它需求：如产品疑问，联系时间等（选填）" rows="2"
+                                                                           id="other"></textarea></div>
+                            </div>
+                            <div class="remark-div">
+                                <div class="remark-len">0
+                                    <!-- -->/100
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-brand-info" id="footerBrandInfo">
+                    <div class="margin">本页面保险产品销售、理赔等服务均由慧择保险经纪提供</div>
+                </div>
+                <div class="fixed-btn">
+                    <div class="diy_background submit-btn" id="book">预约保险顾问</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<script>
+    function showLoading() {
+        $('#loading').show();
+    }
+
+    function hideLoading() {
+        $('#loading').hide();
+    }
+
+    var tipsIndex = 0;
+
+    function showToast(message, delay) {
+        const div = document.createElement('DIV');
+        tipsIndex++;
+        div.setAttribute('class', 'myui-tips tip-index-' + tipsIndex);
+
+        const span = document.createElement('SPAN');
+        span.textContent = message;
+        div.appendChild(span);
+        document.body.appendChild(div);
+        const tipsIndexCopy = tipsIndex;
+        window.setTimeout(function () {
+            const queryDom = document.querySelector('.myui-tips.tip-index-' + tipsIndexCopy);
+            if (queryDom) {
+                document.body.removeChild(queryDom);
+            }
+        }, delay || 3000);
+    }
+
+
+    var sex = 1;// 1=先生 0=女士
+
+    $('#msgCode').click(function () {
+        var phone = $('#phone').val();// 电话
+        if (!phone) {
+            showToast('请输入手机号');
+            return;
+        }
+        if (!/^[1][2,3,4,5,6,7,8,9,0][0-9]{9}$/.test(phone)) {
+            showToast('请输入正确的手机号');
+            return;
+        }
+        showToast('执行获取验证码逻辑');
+    })
+
+    $('.sex-gender').click(function () {
+        if (this.dataset.value == sex) {
+            return;
+        }
+        $('.sex-gender').removeClass('active').removeClass('diy_background');
+        sex = this.dataset.value;
+        $(this).addClass('active').addClass('diy_background');
+        ;
+        // alert('预约保险' + this.dataset.value);
+    })
+    // sex-gender
+    $('.insure-btn').click(function () {
+        $(this).toggleClass('active diy_background');
+        //sex = this.dataset.value ;
+        //$(this).addClass('active').addClass('diy_background');;
+        // alert('预约保险' + this.dataset.value);
+    })
+    // 为谁投保
+    $('.for-btn').click(function () {
+        $(this).toggleClass('active diy_background');
+        //sex = this.dataset.value ;
+        //$(this).addClass('active').addClass('diy_background');;
+        // alert('预约保险' + this.dataset.value);
+    })
+    $('#book').click(function () {
+        // 姓名
+        var name = $('#name').val();// 姓名
+        var phone = $('#phone').val();// 电话
+        var code = $('#code').val();// 验证码
+        var wx = $('#wx').val(); // 微信
+
+        var other = $('#other').val(); //其他需求
+
+        var insureTypes = [];
+        $('.insure-btn.active').each((idx, item) => {
+            // console.log(idx,item.dataset.value);
+            insureTypes.push(item.dataset.value);
+        }); // 保障需求
+
+        var insureForTypes = [];
+        $('.for-btn.active').each((idx, item) => {
+            // console.log(idx,item.dataset.value);
+            insureForTypes.push(item.dataset.value);
+        }); // 保障需求; // 为了谁投保
+
+        showLoading();
+
+        setTimeout(function () {
+            hideLoading();
+            showToast('提交成功');
+        }, 1000);
+        // 得到数据
+    })
+</script>
 </html>
