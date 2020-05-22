@@ -9,7 +9,7 @@ let util = {
 };
 
 export function setTitle (title) {
-  title = title || 'VUE-ADMIN';
+  title = title || 'jhb';
   window.document.title = title;
 }
 
@@ -31,7 +31,7 @@ export function setMenu (routers, code) {
       menu.push(obj);
     }
   });
-  
+
   return menu;
 }
 
@@ -40,9 +40,9 @@ export function getCurrentPath (vm, router) {
   // console.log(router);
   // const routers = vm.$store.state.routers;
   // console.log(routers);
-  
+
   let currentPathArr = [];
-  
+
   if (router.name !== 'home') {
     if (router.name.indexOf('_index') > -1) {
       currentPathArr.push({
@@ -64,10 +64,10 @@ export function getCurrentPath (vm, router) {
       });
     }
   }
-  
+
   // console.log(currentPathArr);
   // 当 currentPathArr 的长度不为空的时候  提交 action
-  
+
   return currentPathArr;
 }
 
@@ -79,12 +79,12 @@ export function mergeBarData (target, data) {
       return first.name;
     });
   }
-  
+
   if (target.nest) {
     target.xAxis.data = data[0].value.map(first => {
       return first.name;
     });
-    
+
     target.series = data.map(first => {
       let obj = {
         name: first.name,
@@ -105,11 +105,11 @@ export function mergeBarData (target, data) {
     });
   } else {
     let categoryAxis = target.xAxis.type === 'category' ? target.xAxis : target.yAxis;
-    
+
     categoryAxis.data = data.map(first => {
       return first.name;
     });
-    
+
     target.series[0].data = data.map(first => {
       return first.value;
     });

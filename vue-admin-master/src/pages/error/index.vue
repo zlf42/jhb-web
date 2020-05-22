@@ -1,7 +1,7 @@
 <template>
   <div class="error">
     <div class="main-logo">
-      VUE-ADMIN 后台管理系统
+      后台管理系统
     </div>
     <div class="error-main">
       <div class="err-reason">{{ errorMap[errorCode] && errorMap[errorCode].message || '请求失败'}}</div>

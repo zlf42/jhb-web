@@ -35,7 +35,7 @@
       <div class="menu-collapse-wrapper float-left" @click="toggleMenu">
         <i class="el-icon-adm-menu" :style="{transform: 'rotateZ(' + (this.isCollapsed ? '90' : '0') + 'deg)'}"></i>
       </div>
-      <div class="title float-left">VUE-ADMIN 后台管理系统</div>
+      <div class="title float-left">后台管理系统</div>
       <ul class="menu-list float-right">
         <li v-if="user" class="menu-item" style="padding: 0;">
           <el-dropdown
@@ -54,9 +54,9 @@
             </el-dropdown-menu>
           </el-dropdown>
         </li>
-        <li class="menu-item">
+      <!--  <li class="menu-item">
           <i class="icon el-icon-adm-help"></i>
-        </li>
+        </li>-->
         <li class="menu-item" @click="exit">
           <i class="icon iconfont el-icon-adm-exit"></i>
         </li>
@@ -71,7 +71,7 @@
 </template>
 <script>
   import {sessionStorage} from 'src/assets/js/storage';
-  
+
   export default {
     created() {
       this.checkAuth();
@@ -166,7 +166,7 @@
             name: '超级管理员'
           }
         };
-        
+
         this.$store.commit('SET_USER', User);
       },
       handleCommand(command) {
@@ -195,7 +195,7 @@
 </script>
 <style lang="scss">
   @import '../../assets/styles/variable';
-  
+
   .siderbar-wrapper {
     position: fixed;
     top: 0;
@@ -205,7 +205,7 @@
     z-index: 11;
     background-color: $siderbarBackgroundColor;
     transition: all 0.3s ease-in-out;
-    
+
     .logo-wrapper {
       height: 40px;
       line-height: 40px;
@@ -215,7 +215,7 @@
       color: #FFFFFF;
       color: #65CEA7;
     }
-    
+
     .menu-wrapper {
       position: absolute;
       top: 72px;
@@ -223,43 +223,43 @@
       width: 100%;
       border-right: none;
       transition: all 0.3s ease-in-out;
-      
+
       &:not(.el-menu--collapse) {
         overflow-y: auto;
         overflow-x: hidden;
       }
-      
+
       i {
         color: #FFFFFF;
       }
-      
+
       .menu-item {
-        
+
         &.is-active, &:hover {
           background-color: #353F4F !important;
           color: #65CEA7 !important;
-          
+
           i {
             color: #65CEA7 !important;
           }
         }
-        
+
       }
-      
+
       .el-submenu__title:hover {
         color: #65CEA7 !important;
-        
+
         i {
           color: #65CEA7 !important;
         }
       }
-      
+
       .el-submenu, .el-menu-item {
         width: 100%;
       }
     }
   }
-  
+
   .topbar-wrapper {
     position: fixed;
     left: $siderbarWidth;
@@ -272,23 +272,23 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12), 0 0 6px 0 rgba(0, 0, 0, .04);
     transition: all 0.3s ease-in-out;
     z-index: 12;
-    
+
     .menu-collapse-wrapper {
       height: 100%;
       width: 48px;
       text-align: center;
       cursor: pointer;
-      
+
       i {
         transition: all 0.3s ease-in-out;
       }
     }
-    
+
     .title {
       height: 100%;
       font-weight: bold;
     }
-    
+
     .menu-list {
       .menu-item {
         position: relative;
@@ -298,17 +298,17 @@
         height: 48px;
         text-align: center;
         font-size: 0px;
-        
+
         &:hover {
           cursor: pointer;
           background-color: #F5F5F5;
         }
-        
+
         .icon {
           vertical-align: middle;
           font-size: 24px;
         }
-        
+
         .text {
           display: inline-block;
           vertical-align: middle;
@@ -318,7 +318,7 @@
       }
     }
   }
-  
+
   .content-wrapper {
     position: fixed;
     left: $siderbarWidth;
@@ -328,7 +328,7 @@
     padding: 16px;
     overflow: auto;
     transition: all 0.3s ease-in-out;
-    
+
     .content {
       position: relative;
       width: 100%;

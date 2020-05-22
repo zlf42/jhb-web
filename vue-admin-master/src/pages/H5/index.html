@@ -180,7 +180,7 @@
                                                                          id="phone" maxlength="11"/></div>
                                 </div>
                             </div>
-                            <div class="list-code">
+                    <!--        <div class="list-code">
                                 <div class="am-list-item am-input-item am-list-item-middle">
                                     <div class="am-list-line">
                                         <div class="am-input-label am-input-label-5"><span class="c-red">*</span>验证码
@@ -190,7 +190,7 @@
                                     </div>
                                 </div>
                                 <span class="btn diy_background  button am-input-extra" id="msgCode">获取验证码</span>
-                            </div>
+                            </div>-->
                             <div id="captcha"></div>
                             <div class="am-list-item am-input-item am-list-item-middle not-bor radius-bottom">
                                 <div class="am-list-line">
@@ -209,11 +209,10 @@
                                     </div>
                                     <div class="am-list-extra">
                                         <div class="tags">
-                                            <span class="insure-btn btn" data-value="1">意外</span><span
-                                                class="btn insure-btn" data-value="2">
-													疾病</span><span class="insure-btn btn" data-value="3">
-													养老</span><span class="insure-btn btn" data-value="4">
-													教育</span>
+                                          <span class="insure-btn btn" data-value="1">意外</span>
+                                          <span class="btn insure-btn" data-value="2">疾病</span>
+                                          <span class="insure-btn btn" data-value="3">养老</span>
+                                          <span class="insure-btn btn" data-value="4">教育</span>
                                         </div>
                                     </div>
                                 </div>
@@ -225,10 +224,11 @@
                                         <div class="am-list-brief">可多选</div>
                                     </div>
                                     <div class="am-list-extra">
-                                        <div class="tags"><span class="btn for-btn" data-value="1">本人</span><span
-                                                class="btn for-btn" data-value="2">父母</span><span
-                                                class="btn for-btn" data-value="3">配偶</span><span class="btn for-btn"
-                                                                                                  data-value="4">子女</span>
+                                        <div class="tags">
+                                          <span class="btn for-btn" data-value="1">本人</span>
+                                          <span class="btn for-btn" data-value="2">父母</span>
+                                          <span class="btn for-btn" data-value="3">配偶</span>
+                                          <span class="btn for-btn" data-value="4">子女</span>
                                         </div>
                                     </div>
                                 </div>
@@ -236,11 +236,11 @@
                             </div>
                             <div class="remark-textarea am-list-item am-textarea-item">
                                 <div class="am-textarea-control"><textarea placeholder="其它需求：如产品疑问，联系时间等（选填）" rows="2"
-                                                                           id="other"></textarea></div>
+                                                                           id="other" maxlength="180"></textarea></div>
                             </div>
                             <div class="remark-div">
                                 <div class="remark-len">0
-                                    <!-- -->/100
+                                    <!-- -->/200
                                 </div>
                             </div>
                         </div>
@@ -260,101 +260,120 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
 <script>
     function showLoading() {
-        $('#loading').show();
+      $('#loading').show();
     }
 
     function hideLoading() {
-        $('#loading').hide();
+      $('#loading').hide();
     }
 
     var tipsIndex = 0;
 
     function showToast(message, delay) {
-        const div = document.createElement('DIV');
-        tipsIndex++;
-        div.setAttribute('class', 'myui-tips tip-index-' + tipsIndex);
+      const div = document.createElement('DIV');
+      tipsIndex++;
+      div.setAttribute('class', 'myui-tips tip-index-' + tipsIndex);
 
-        const span = document.createElement('SPAN');
-        span.textContent = message;
-        div.appendChild(span);
-        document.body.appendChild(div);
-        const tipsIndexCopy = tipsIndex;
-        window.setTimeout(function () {
-            const queryDom = document.querySelector('.myui-tips.tip-index-' + tipsIndexCopy);
-            if (queryDom) {
-                document.body.removeChild(queryDom);
-            }
-        }, delay || 3000);
+      const span = document.createElement('SPAN');
+      span.textContent = message;
+      div.appendChild(span);
+      document.body.appendChild(div);
+      const tipsIndexCopy = tipsIndex;
+      window.setTimeout(function () {
+        const queryDom = document.querySelector('.myui-tips.tip-index-' + tipsIndexCopy);
+        if (queryDom) {
+          document.body.removeChild(queryDom);
+        }
+      }, delay || 3000);
     }
 
 
     var sex = 1;// 1=先生 0=女士
 
-    $('#msgCode').click(function () {
-        var phone = $('#phone').val();// 电话
-        if (!phone) {
-            showToast('请输入手机号');
-            return;
-        }
-        if (!/^[1][2,3,4,5,6,7,8,9,0][0-9]{9}$/.test(phone)) {
-            showToast('请输入正确的手机号');
-            return;
-        }
-        showToast('执行获取验证码逻辑');
-    })
-
     $('.sex-gender').click(function () {
-        if (this.dataset.value == sex) {
-            return;
-        }
-        $('.sex-gender').removeClass('active').removeClass('diy_background');
-        sex = this.dataset.value;
-        $(this).addClass('active').addClass('diy_background');
-        ;
+      if (this.dataset.value == sex) {
+        return;
+      }
+      $('.sex-gender').removeClass('active').removeClass('diy_background');
+      sex = this.dataset.value;
+      $(this).addClass('active').addClass('diy_background');
+      ;
         // alert('预约保险' + this.dataset.value);
     })
     // sex-gender
     $('.insure-btn').click(function () {
-        $(this).toggleClass('active diy_background');
-        //sex = this.dataset.value ;
-        //$(this).addClass('active').addClass('diy_background');;
+      $(this).toggleClass('active diy_background');
+        // sex = this.dataset.value ;
+        // $(this).addClass('active').addClass('diy_background');;
         // alert('预约保险' + this.dataset.value);
     })
     // 为谁投保
     $('.for-btn').click(function () {
-        $(this).toggleClass('active diy_background');
-        //sex = this.dataset.value ;
-        //$(this).addClass('active').addClass('diy_background');;
+      $(this).toggleClass('active diy_background');
+        // sex = this.dataset.value ;
+        // $(this).addClass('active').addClass('diy_background');;
         // alert('预约保险' + this.dataset.value);
     })
     $('#book').click(function () {
         // 姓名
-        var name = $('#name').val();// 姓名
-        var phone = $('#phone').val();// 电话
-        var code = $('#code').val();// 验证码
-        var wx = $('#wx').val(); // 微信
+      var name = $('#name').val().replace(/\s+/g,"");// 姓名
+      var phone = $('#phone').val().replace(/\s+/g,"");// 电话
+      var other = $('#other').val().replace(/\s+/g,"");// 其他
+      var wx = $('#wx').val().replace(/\s+/g,"");// 微信
+      var sex= '';
+      $.each($(".sex-gender"), function(i) {
+        if ($(this).hasClass('active')) {
+          sex = $(this).html();
+        }
+      });
+      var insureTypes = [];
+      $('.insure-btn.active').each((idx, item) => {
+        insureTypes.push(item.dataset.value);
+      }); // 保障需求
 
-        var other = $('#other').val(); //其他需求
-
-        var insureTypes = [];
-        $('.insure-btn.active').each((idx, item) => {
-            // console.log(idx,item.dataset.value);
-            insureTypes.push(item.dataset.value);
-        }); // 保障需求
-
-        var insureForTypes = [];
-        $('.for-btn.active').each((idx, item) => {
-            // console.log(idx,item.dataset.value);
-            insureForTypes.push(item.dataset.value);
-        }); // 保障需求; // 为了谁投保
-
-        showLoading();
-
-        setTimeout(function () {
+      var insureForTypes = [];
+      $('.for-btn.active').each((idx, item) => {
+        insureForTypes.push(item.dataset.value);
+      }); // 保障需求; // 为了谁投保
+      if(name==''){
+        showToast('请输入姓名');
+        return;
+      }
+      if(phone==''){
+        showToast('请输入联系电话');
+        return;
+      }
+      var obj = {};
+      obj.name = name;
+      obj.mobile = phone;
+      obj.remarks=other;
+      obj.securityNeed =insureTypes;
+      obj.insurePeople =insureForTypes;
+      obj.sex=sex;
+      obj.wxNo=wx;
+      showLoading();
+      $.ajax({
+        url: 'http://localhost:8080/user/addUser',
+        data:obj,//obj是你要提交是json字符串
+        type: 'post',
+        contentType: "application/json;charset=UTF-8",
+        dataType: 'jsonp',
+        success: function(res){
+          setTimeout(function () {
             hideLoading();
             showToast('提交成功');
-        }, 1000);
-        // 得到数据
+          }, 2000);
+        },
+        error: function(res){
+          setTimeout(function () {
+            hideLoading();
+            showToast('提交失败');
+          }, 2000);
+        }
+      });
+
+
+
     })
 </script>
 </html>
