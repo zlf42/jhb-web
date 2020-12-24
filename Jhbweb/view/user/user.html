@@ -42,7 +42,7 @@
 		<script type="text/html" id="user-toolbar"></script>
 
 		<script type="text/html" id="user-createTime">
-		    {{layui.util.toDateString(d.createTime, 'yyyy-MM-dd HH:mm:ss')}}
+		    {{layui.util.toDateString(d.creatTime, 'yyyy-MM-dd HH:mm:ss')}}
 		</script>
 		<script type="text/html" id="rank">
 			{{d.LAY_TABLE_INDEX+1}}
@@ -64,7 +64,7 @@
 		                {title: '电话', field: 'mobile', align:'center', templet:'#user-sex'},
 		                {title: '微信', field: 'wxNo', align:'center'},
 						{title: '地址', field: 'address', align:'center'},
-		                {title: '提交时间', field: 'createTime', align:'center',templet:'#user-createTime'},
+		                {title: '提交时间', field: 'creatTime', align:'center',templet:'#user-createTime'},
 						{title: '保障需求', field: 'securityNeed', align:'center', },
 						{title: '为谁投保', field: 'insurePeople', align:'center', },
 						{title: '备注', field: 'remarks', align:'center', }
@@ -73,7 +73,7 @@
 
 		        table.render({
 		            elem: '#user-table',
-		            url: 'http://47.104.28.105:8080/user/getUserListPage',
+		            url: 'http://47.104.28.105:8088/user/getUserListPage',
 					method:'post',
 		            page: true ,
 		            cols: cols ,

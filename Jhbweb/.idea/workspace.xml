@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dd75276-1f2f-491a-acb9-29d86c3a7501" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/images/favicon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/images/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/H5/img/favicon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/user/aa.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/H5/addUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/H5/addUser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/user/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/user/user.html" afterDir="false" />
     </list>
@@ -14,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -57,21 +63,21 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/work/xiaochengxu" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\zlf\work\jhb\web\Jhb web\admin\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\zlf\work\jhb\web\Jhbweb\admin\images" />
+      <recent name="E:\zlf\work\jhb\web\Jhbweb\view\H5\img" />
       <recent name="E:\zlf\work\jhb\web\Jhb web\component" />
       <recent name="E:\zlf\work\jhb\web\Jhb web\component\layui\lay" />
       <recent name="E:\zlf\work\jhb\web\Jhb web\admin\js" />
-      <recent name="E:\zlf\work\jhb\web\Jhb web\admin\images" />
-      <recent name="E:\zlf\work\jhb\web\Jhb web\view\H5" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\zlf\work\jhb\web\Jhb web\admin\js" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript 调试.addUser.html">
@@ -107,7 +113,8 @@
       <workItem from="1591066551839" duration="2090000" />
       <workItem from="1591069226989" duration="101000" />
       <workItem from="1591069352973" duration="2550000" />
-      <workItem from="1591684827752" duration="167000" />
+      <workItem from="1591684827752" duration="6162000" />
+      <workItem from="1597037905374" duration="1042000" />
     </task>
     <servers />
   </component>
@@ -115,10 +122,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1591338204873">
+    <state x="1166" y="204" key="FileChooserDialogImpl" timestamp="1597205164591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591338204873" />
+    <state x="1166" y="204" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597205164591" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1591069326523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

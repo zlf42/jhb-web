@@ -19,6 +19,8 @@
 <meta http-equiv="Description" content="家庭保险账户"/>
 <script src="https://res.qixin18.com/node-qixin-cps-v3/static/js/flexible/flexible.js"></script>
 <script src="https://res.qixin18.com/node-qixin-cps-v3/static/js/jweixin-1.4.0.js"></script>
+<link rel="icon" href="../../admin/images/favicon.jpg">
+<title>预约页面</title>
 <style>
     .diy_color,
     .diy_color_after::after,
@@ -276,9 +278,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer-brand-info" id="footerBrandInfo">
+               <!-- <div class="footer-brand-info" id="footerBrandInfo">
                     <div class="margin">本页面保险产品销售、理赔等服务均由家合保保险经纪提供</div>
-                </div>
+                </div>-->
                 <div class="fixed-btn">
                     <div class="diy_background submit-btn" id="book">预约保险顾问</div>
                 </div>
@@ -406,8 +408,8 @@
         obj.sex = sex;
         obj.wxNo = wx;
         obj.address=address;
-        var devUrl='http://127.0.0.1:8080/user/addUser';
-        var prodUrl='http://47.104.28.105:8080/user/addUser';
+        var devUrl='http://127.0.0.1:8088/user/addUser';
+        var prodUrl='http://47.104.28.105:8088/user/addUser';
         var pathUrl='';
         var env=2; //1.测试路径2.正式路径
         showLoading();
